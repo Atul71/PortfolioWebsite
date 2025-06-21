@@ -1,3 +1,20 @@
+// Loading Animation
+document.addEventListener('DOMContentLoaded', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    const mainContent = document.getElementById('main-content');
+    
+    // Show main content initially hidden
+    mainContent.style.display = 'block';
+    
+    // Hide loading screen after animations complete
+    setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        setTimeout(() => {
+            loadingScreen.style.display = 'none';
+        }, 800);
+    }, 3500); // Wait for loading bar and color animations to complete
+});
+
 // This file is ready for your custom scripts.
 // For example, you could add smooth scrolling for navigation links.
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -64,4 +81,28 @@ if (track) {
   });
   
   updateButtons();
-} 
+}
+
+// Scroll Animation for Experience Section
+document.addEventListener('DOMContentLoaded', () => {
+  const timelineItems = document.querySelectorAll('.timeline-item');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  timelineItems.forEach(item => {
+    observer.observe(item);
+  });
+}); 

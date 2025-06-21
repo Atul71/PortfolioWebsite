@@ -1,29 +1,69 @@
 // Loading Animation
-document.addEventListener('DOMContentLoaded', function() {
-    const loadingScreen = document.getElementById('loading-screen');
-    const mainContent = document.getElementById('main-content');
-    
-    // Show main content initially hidden
-    mainContent.style.display = 'block';
-    
-    // Hide loading screen after animations complete
+document.addEventListener('DOMContentLoaded', function () {
+    // Loading Animation
     setTimeout(() => {
+        const loadingScreen = document.getElementById('loading-screen');
+        const mainContent = document.getElementById('main-content');
+        
         loadingScreen.style.opacity = '0';
+        loadingScreen.style.transition = 'opacity 0.8s ease-out';
+        
         setTimeout(() => {
             loadingScreen.style.display = 'none';
+            mainContent.style.display = 'block';
+            mainContent.style.opacity = '0';
+            mainContent.style.animation = 'fadeInMain 1s ease-out forwards';
         }, 800);
-    }, 3500); // Wait for loading bar and color animations to complete
-});
+    }, 2000); // Wait 2 seconds for loading animation
 
-// This file is ready for your custom scripts.
-// For example, you could add smooth scrolling for navigation links.
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('nav a[href^="#"]');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            let target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         });
+    });
+
+    // Experience Section Accordion
+    const accordionHeaders = document.querySelectorAll('.accordion-header');
+    accordionHeaders.forEach(header => {
+        header.addEventListener('click', function () {
+            const item = this.closest('.experience-list-item');
+            const wasActive = item.classList.contains('active');
+
+            // Toggle the clicked item only
+            if (wasActive) {
+                item.classList.remove('active');
+            } else {
+                item.classList.add('active');
+            }
+        });
+    });
+
+    // Fade-in animations for sections
+    const sections = document.querySelectorAll('section');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(section);
     });
 });
 

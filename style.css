@@ -355,6 +355,13 @@ nav {
   min-width: 300px;
 }
 
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
 .resume-btn {
   display: inline-flex;
   align-items: center;
@@ -374,6 +381,37 @@ nav {
   background: var(--accent-hover);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 150, 136, 0.4);
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: white;
+  color: var(--accent-color);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid var(--accent-color);
+}
+
+.social-btn:hover {
+  background: var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 150, 136, 0.4);
+}
+
+.social-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.social-btn i {
+  font-size: 1.2rem;
 }
 
 .resume-icon {
@@ -1138,6 +1176,20 @@ footer {
     background: linear-gradient(transparent, var(--light-navy));
     pointer-events: none;
     opacity: 0.8;
+  }
+
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .social-btn i {
+    font-size: 1rem;
   }
 }
 
@@ -2048,7 +2100,23 @@ footer {
     font-size: 1.1rem;
   }
   
+  .action-buttons {
+    justify-content: center;
+    gap: 0.75rem;
+  }
+  
   .resume-btn {
     align-self: center;
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .social-btn {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .social-btn i {
+    font-size: 1rem;
   }
 } 

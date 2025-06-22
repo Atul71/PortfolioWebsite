@@ -10,12 +10,15 @@
     <!-- Loading Screen -->
     <div id="loading-screen">
       <div class="loading-content">
-        <div class="loading-name">
-          <span id="loading-name">ATUL ARUN</span>
+        <img src="assets/atul.png" alt="Atul Arun" class="loading-profile-image">
+        <div class="loading-box">
+          <span class="loading-border top"></span>
+          <span class="loading-border right"></span>
+          <span class="loading-border bottom"></span>
+          <span class="loading-border left"></span>
+          <div class="loading-name">ATUL ARUN</div>
         </div>
-        <div class="loading-bar-container">
-          <div class="loading-bar"></div>
-        </div>
+        <div class="loading-percentage" id="loading-percentage">0%</div>
       </div>
     </div>
 
@@ -38,8 +41,12 @@
       <main>
         <section id="hero">
           <div class="hero-content">
-            <h1>Hello, I'm <span class="name">Atul Arun</span></h1>
-            <p class="subtitle">Software Engineer - MS Computer Science @ University of Florida</p>
+            <div class="hero-header">
+              <h1>Hello, I'm <span class="name">Atul Arun</span></h1>
+              <img src="assets/atul.png" alt="Atul Arun" class="profile-image">
+            </div>
+            <p class="subtitle">Software Engineer/Senior Data and Business Intelligence Engineer - Incoming student (MS Computer Science @ University of Florida)</p>
+            <p class="internship-status">Actively searching for Software Engineering/Data and Business Intelligence internship opportunities for Summer 2026</p>
           </div>
         </section>
 
@@ -51,8 +58,8 @@
           </p>
           <div class="stats">
             <div class="stat-item"><h3>3.8+</h3><p>Years Experience</p></div>
-            <div class="stat-item"><h3>10+</h3><p>Projects</p></div>
-            <div class="stat-item"><h3>10+</h3><p>Technologies</p></div>
+            <div class="stat-item"><h3>8+</h3><p>Projects</p></div>
+            <div class="stat-item"><h3>17+</h3><p>Technologies</p></div>
           </div>
         </section>
 
@@ -101,32 +108,52 @@
           <h2 class="section-title">Professional Experience</h2>
           <div class="experience-list">
             <div class="experience-list-item active">
-              <div class="experience-date">2022 — 2024</div>
+              <div class="experience-date">Jul 2024 — Present</div>
               <div class="experience-accordion">
-                <div class="accordion-header"><h3>Senior Associate Consultant · Bosch</h3><span class="accordion-icon"></span></div>
+                <div class="accordion-header"><h3>Senior Associate Consultant · Bosch Global Software Technologies</h3><span class="accordion-icon"></span></div>
                 <div class="accordion-content">
-                  <p>Led all Power BI topics for the Quality Management Domain, developing several key dashboards for job monitoring, defect cost analysis, and global quality management (OneQ). Implemented a PySpark script for data loading in Azure Synapse and created a POC for a JIRA ticket tracker.</p>
-                  <ul class="experience-tags"><li>Power BI</li><li>Azure Synapse</li><li>PySpark</li><li>SQL Server</li><li>JIRA</li></ul>
+                  <ul>
+                    <li><strong>Project:</strong> Mobility Data and Analytics Quality Management domain</li>
+                    <li><strong>Location:</strong> Bangalore, India</li>
+                    <li>Designed and deployed dashboard for Global Quality Management, integrating complex datasets from SQL Server, Oracle, APIs, and Data Marts into a unified Power BI solution. Post-launch, ensured <strong>~100% data accuracy</strong>, supporting over <strong>1,000 users</strong> with an average of <strong>25,000 monthly views</strong>, and improving user efficiency through actionable insights.</li>
+                    <li>Managed Bosch's Internal Defect Cost dashboard for Bosch plants, delivering insights on plant performance and failure rates across all global manufacturing sites. Improved UI/UX based on stakeholder feedback, enhancing usability and enabling more effective, data-driven decisions to reduce defect costs.</li>
+                    <li>Developed a global Concession Monitoring dashboard for Bosch, designing a star schema and integrating data from <strong>12 SAP systems</strong> to deliver real-time insights into active and closed concessions, improving traceability of parts booked across multiple OEMs.</li>
+                  </ul>
+                  <ul class="experience-tags"><li>Power BI</li><li>SQL Server</li><li>Oracle</li><li>SAP</li><li>Data Marts</li><li>Star Schema</li></ul>
                 </div>
               </div>
             </div>
             <div class="experience-list-item">
-              <div class="experience-date">2021 — 2022</div>
+              <div class="experience-date">Sep 2021 — Jun 2024</div>
               <div class="experience-accordion">
-                <div class="accordion-header"><h3>Software Engineer · Bosch</h3><span class="accordion-icon"></span></div>
+                <div class="accordion-header"><h3>Software Engineer · Bosch Global Software Technologies</h3><span class="accordion-icon"></span></div>
                 <div class="accordion-content">
-                  <p>Optimized data models for plant maintenance dashboards and developed a concession monitoring dashboard consuming data from over 12 SAP systems. Automated the generation of 4,300 views using Python, reducing a 30-day task to 2 days. Also enhanced Planisware's resource management capabilities for over 25,000 users.</p>
-                  <ul class="experience-tags"><li>Python</li><li>SQL</li><li>Planisware</li><li>SAP</li></ul>
+                  <ul>
+                    <li><strong>Project:</strong> Mobility and Data Analytics Cross & Manufacturing domain</li>
+                    <li><strong>Location:</strong> Bangalore, India</li>
+                    <li>Automated the creation and access provisioning of <strong>4,300 Oracle views</strong> for data exploration using Python, reducing a <strong>30-day effort</strong> to just <strong>2 days</strong>, and delivering a scalable proof of concept for future automation initiatives.</li>
+                    <li>Led the end-to-end development of a job monitoring solution for <strong>550 jobs</strong> in the Quality Management domain, integrating Power BI dashboards and PL/SQL-driven email alerts, cutting stakeholder-reported failures by <strong>90%</strong> and boosting operational efficiency.</li>
+                    <li>Contributed to Power BI Ops by migrating version control from SharePoint to Azure DevOps, enhancing collaboration, change tracking, and development efficiency across the BI team.</li>
+                    <li>Developed a PySpark script for comprehensive data cleaning and modeling of Azure cost data for the project, creating optimized backend views for Power BI, enabling detailed analysis of rising costs across multiple projects.</li>
+                    <li>Implemented a Jira ticket tracking dashboard for Bosch's Mobility domain by ingesting data via Jira API with pagination, designing and delivering end-to-end visibility into project and issue management.</li>
+                  </ul>
+                  <ul class="experience-tags"><li>Python</li><li>Oracle</li><li>Power BI</li><li>PL/SQL</li><li>Azure DevOps</li><li>PySpark</li><li>Jira API</li></ul>
                 </div>
               </div>
             </div>
             <div class="experience-list-item">
-              <div class="experience-date">2020 — 2021</div>
+              <div class="experience-date">Mar 2021 — Jun 2021</div>
               <div class="experience-accordion">
-                <div class="accordion-header"><h3>Project Trainee · Bosch</h3><span class="accordion-icon"></span></div>
+                <div class="accordion-header"><h3>Project Trainee · Bosch Global Software Technologies</h3><span class="accordion-icon"></span></div>
                 <div class="accordion-content">
-                  <p>Developed REST APIs using JavaScript to transfer data from Planisware to downstream systems like Oracle Data Lake and SAP. Created resource allocation reports for over 25,000 resources and developed PL/SQL scripts to automate data refresh and transformation in Oracle data marts.</p>
-                  <ul class="experience-tags"><li>REST API</li><li>JavaScript</li><li>Oracle</li><li>PL/SQL</li></ul>
+                  <ul>
+                    <li><strong>Project:</strong> Planisware</li>
+                    <li><strong>Location:</strong> Bangalore, India</li>
+                    <li>Development of Rest API with JS/Opx2Script for transferring data from Planisware system to multiple downstream systems including Oracle Data Lake, SAP systems.</li>
+                    <li>Developed resource and project allocation reports to optimize skills management and deployment across Bosch locations in Vietnam, Mexico, and India, supporting <strong>25K+ resources</strong> and <strong>5,000+ projects</strong>.</li>
+                    <li>Created multiple Oracle data mart views tailored to user requirements and developed PL/SQL scripts to automate data refresh, optimize, loading, and transformation, ensuring timely and accurate reporting.</li>
+                  </ul>
+                  <ul class="experience-tags"><li>REST API</li><li>JavaScript</li><li>Opx2Script</li><li>Oracle Data Lake</li><li>SAP</li><li>PL/SQL</li></ul>
                 </div>
               </div>
             </div>

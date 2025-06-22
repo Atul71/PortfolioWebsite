@@ -2,6 +2,8 @@
 
 Hey there! This is my personal portfolio website that I built to showcase my journey in Software Engineering and Data & Business Intelligence. What makes this project special? I developed the entire thing using AI assistance - specifically Cursor AI and some pretty efficient prompting techniques. It's been quite the adventure!
 
+https://atul71.github.io/PortfolioWebsite/
+
 ## My AI Development Journey
 
 So here's the cool part - I built this entire portfolio using **AI as my coding partner**. It's been an amazing experience working with Cursor AI and learning how to craft really effective prompts. Think of it as having a super-smart coding buddy who helps you turn ideas into reality faster than ever.

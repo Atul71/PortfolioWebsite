@@ -99,7 +99,7 @@ body {
 }
 
 section {
-  padding: 60px 0;
+  padding: 40px 0;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -461,6 +461,12 @@ nav {
 .project-image a:hover img {
     mix-blend-mode: normal;
     filter: none;
+}
+
+.sudoku-image .project-image img {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
 }
 
 

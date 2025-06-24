@@ -26,22 +26,25 @@
       <header>
         <nav>
           <div class="logo"><a href="#">Atul Arun</a></div>
-          <div class="hamburger" id="hamburger">
+          <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-menu">
             <span></span>
             <span></span>
             <span></span>
-          </div>
-          <ul class="nav-links" id="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#recommendations">Recommendations</a></li>
-            <li><a href="#certifications">Certifications</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
+          </button>
         </nav>
       </header>
+      <!-- Mobile menu and overlay moved outside header/nav for full-screen effect -->
+      <ul class="nav-links" id="mobile-menu">
+        <li><button id="close-mobile-menu" aria-label="Close menu" class="close-menu-btn">&times;</button></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#recommendations">Recommendations</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="overlay" id="nav-overlay" tabindex="-1" aria-hidden="true"></div>
 
       <main>
         <section id="hero">

@@ -1,6 +1,6 @@
 # Atul Arun - Portfolio Website
 
-Hey there! This is my personal portfolio website that I built to showcase my journey in Software Engineering and Data & Business Intelligence. What makes this project special? I developed the entire thing using AI assistance - specifically Cursor AI and some pretty efficient prompting techniques. It's been quite the adventure!
+Hey there! This is my personal portfolio website that I built to showcase my journey in Software Engineering and Data & Business Intelligence. What makes this project special? I developed the entire thing using AI assistance - specifically Cursor AI.
 
 https://atul71.github.io/PortfolioWebsite/
 

@@ -438,6 +438,21 @@ nav {
   font-size: 2rem;
   color: var(--teal);
   margin: 0;
+  font-weight: 400;
+}
+.small-stat {
+  font-size: 1.2rem !important;
+  font-weight: 400;
+}
+.smaller-stat {
+  font-size: 1rem !important;
+  font-weight: 400;
+}
+.stat-item p {
+  font-size: 1.2rem;
+  color: var(--teal);
+  margin: 0;
+  font-weight: 400;
 }
 
 /* Skills Section */
@@ -950,10 +965,13 @@ footer {
   .stats {
     flex-direction: column;
     gap: 20px;
+    justify-content: center;
+    align-items: center;
   }
 
   .stat-item {
     text-align: center;
+    margin: 0 auto;
   }
 
   /* Skills Section Mobile */
@@ -966,9 +984,12 @@ footer {
     justify-content: center;
   }
 
+  .skill-category-compact {
+    padding: 12px;
+  }
   .skill-tile {
-    font-size: 0.9rem;
-    padding: 8px 12px;
+    font-size: 0.8rem;
+    padding: 6px 8px;
   }
 
   /* Experience Section Mobile */
@@ -1004,25 +1025,38 @@ footer {
   /* Projects Section Mobile */
   .project-list-item, .project-list-item:nth-of-type(odd) {
     display: flex;
-    flex-direction: column;
-    gap: 30px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 30px;
   }
 
   .project-content, .project-list-item:nth-of-type(odd) .project-content {
-    width: 100%;
-    padding: 20px;
+    width: auto;
+    padding: 10px 0;
+    flex: 1 1 60%;
     text-align: left;
   }
 
   .project-image {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
     margin-top: 0;
-    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex: 0 0 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .project-description {
-    padding: 15px;
-    background-color: var(--light-navy);
-    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
   }
 
   .project-list-item:nth-of-type(odd) .project-tags, .project-tags {
@@ -1455,12 +1489,14 @@ ul {
   font-size: 2.5rem;
   margin: 0 0 0.5rem 0;
   color: #64ffda; /* Teal Accent */
+  font-weight: 400;
 }
 
 .stat-item p {
+  font-size: 1.2rem;
+  color: var(--teal);
   margin: 0;
-  font-size: 1rem;
-  color: #a8b2d1; /* Lighter Text */
+  font-weight: 400;
 }
 
 /* Skills Section */
@@ -2242,4 +2278,8 @@ header, #main-content {
   margin-right: 8px;
   font-size: 1.2em;
   vertical-align: middle;
+}
+
+.stat-highlight {
+  color: var(--teal) !important;
 } 

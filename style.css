@@ -1023,53 +1023,104 @@ footer {
   }
 
   /* Projects Section Mobile */
+  .project-list {
+    padding: 0;
+    margin: 0;
+  }
   .project-list-item, .project-list-item:nth-of-type(odd) {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-
-  .project-content, .project-list-item:nth-of-type(odd) .project-content {
-    width: auto;
-    padding: 10px 0;
-    flex: 1 1 60%;
-    text-align: left;
-  }
-
-  .project-image {
-    width: 70px;
-    height: 70px;
-    min-width: 70px;
-    min-height: 70px;
-    margin-top: 0;
+    flex-direction: column;
+    align-items: center;
+    background: var(--light-navy);
     border-radius: 8px;
-    overflow: hidden;
-    flex: 0 0 70px;
+    box-shadow: 0 8px 24px -8px rgba(2,12,27,0.7);
+    padding: 20px 16px 16px 16px;
+    margin: 0 12px 24px 12px;
+    width: auto;
+    max-width: 100%;
+    min-width: 0;
+    gap: 0;
+    overflow: visible;
+  }
+  .project-image {
+    width: 100%;
+    height: 160px;
+    min-width: 0;
+    min-height: 0;
+    margin: 0 0 16px 0;
+    border-radius: 6px;
+    flex: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+    background: #0a192f;
   }
-
   .project-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 8px;
+    border-radius: 6px;
+    display: block;
   }
-
-  .project-list-item:nth-of-type(odd) .project-tags, .project-tags {
-    justify-content: flex-start;
+  .project-content, .project-list-item:nth-of-type(odd) .project-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
   }
-
+  .project-overline, .project-title, .project-description, .project-tags, .project-links {
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .project-title {
+    font-size: 1.2rem;
+    margin: 0 0 8px 0;
+    font-weight: 600;
+  }
+  .project-overline {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+    color: var(--teal);
+    letter-spacing: 1px;
+  }
+  .project-description {
+    font-size: 1rem;
+    margin: 0 0 12px 0;
+    padding: 0 2px;
+    color: var(--slate);
+  }
   .project-tags {
+    display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 10px;
+    padding: 0;
   }
-
   .project-tags li {
-    font-size: 0.8rem;
+    background: var(--navy);
+    color: var(--teal);
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  .project-links {
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+  .project-links a {
+    color: var(--teal);
+    font-weight: 500;
+    text-decoration: underline;
+    font-size: 1rem;
+    margin: 0 6px;
   }
 
   /* Recommendations Section Mobile */

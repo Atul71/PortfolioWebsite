@@ -664,6 +664,15 @@ nav {
   box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
   position: relative;
   z-index: 2;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  text-align: justify;
+  max-width: 340px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  padding: 0 2px;
+  color: var(--slate);
 }
 .project-tags {
   display: flex;
@@ -985,11 +994,16 @@ footer {
   }
 
   .skill-category-compact {
-    padding: 12px;
+    padding: 8px;
+  }
+  .category-title-compact {
+    font-size: 0.82rem;
+    margin-bottom: 10px;
   }
   .skill-tile {
-    font-size: 0.8rem;
-    padding: 6px 8px;
+    font-size: 0.72rem;
+    padding: 5px 6px;
+    min-width: 65px;
   }
 
   /* Experience Section Mobile */
@@ -1028,19 +1042,15 @@ footer {
     margin: 0;
   }
   .project-list-item, .project-list-item:nth-of-type(odd) {
+    background-color: var(--light-navy);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px -15px rgba(2,12,27,0.7);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background: var(--light-navy);
-    border-radius: 8px;
-    box-shadow: 0 8px 24px -8px rgba(2,12,27,0.7);
-    padding: 20px 16px 16px 16px;
-    margin: 0 12px 24px 12px;
-    width: auto;
-    max-width: 100%;
-    min-width: 0;
-    gap: 0;
-    overflow: visible;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 18px 10px 14px 10px;
+    margin: 0 6px 16px 6px;
   }
   .project-image {
     width: 100%;
@@ -1068,48 +1078,34 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 0;
     margin: 0;
-  }
-  .project-overline, .project-title, .project-description, .project-tags, .project-links {
-    width: 100%;
-    text-align: center;
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .project-title {
-    font-size: 1.2rem;
-    margin: 0 0 8px 0;
-    font-weight: 600;
-  }
-  .project-overline {
-    font-size: 0.9rem;
-    margin-bottom: 4px;
-    color: var(--teal);
-    letter-spacing: 1px;
+    gap: 10px;
   }
   .project-description {
-    font-size: 1rem;
-    margin: 0 0 12px 0;
-    padding: 0 2px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    max-width: 320px;
+    padding: 10px 12px;
+    margin-bottom: 10px;
+    background: rgba(17,34,64,0.92);
+    border-radius: 6px;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
     color: var(--slate);
+    box-shadow: 0 4px 16px -8px rgba(2,12,27,0.5);
+  }
+  .project-title {
+    margin: 0 0 6px 0;
+  }
+  .project-overline {
+    margin-bottom: 2px;
   }
   .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    margin-bottom: 10px;
-    padding: 0;
-  }
-  .project-tags li {
-    background: var(--navy);
-    color: var(--teal);
-    border-radius: 3px;
-    padding: 2px 8px;
-    font-size: 0.85rem;
-    margin: 0;
+    margin-bottom: 8px;
   }
   .project-links {
     margin-top: 4px;

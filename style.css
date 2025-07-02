@@ -534,7 +534,7 @@ nav {
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--teal);
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     text-align: left;
 }
 .experience-accordion {
@@ -628,6 +628,14 @@ nav {
 .accordion-content ul li::marker {
     color: var(--teal);
     font-weight: bold;
+}
+
+.accordion-content strong {
+  color: var(--teal);
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  font-size: 1.08em;
+  text-shadow: 0 1px 6px rgba(100,255,218,0.12);
 }
 
 /* Projects Section */

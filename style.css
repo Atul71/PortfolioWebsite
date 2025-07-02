@@ -2356,4 +2356,15 @@ header, #main-content {
     font-size: 1.18rem;
     line-height: 1.7;
   }
+  section {
+    padding: 18px 0 10px 0;
+  }
+  #about,
+  #skills,
+  #experience,
+  #projects,
+  #recommendations,
+  #contact {
+    padding: 2.2rem 2rem;
+  }
 } 

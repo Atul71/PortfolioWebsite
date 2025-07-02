@@ -534,7 +534,7 @@ nav {
     font-size: 1.1rem;
     font-weight: 500;
     color: var(--teal);
-    margin-bottom: 2px;
+    margin-bottom: 0px;
     text-align: left;
 }
 .experience-accordion {

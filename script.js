@@ -1,4 +1,92 @@
 document.addEventListener('DOMContentLoaded', function () {
+    const SKILLS_BY_CATEGORY = [
+        {
+            category: 'Languages',
+            skills: [
+                { name: 'Python' },
+                { name: 'SQL', level: 'advanced' },
+                { name: 'PySpark' },
+                { name: 'Scala', level: 'familiar' },
+                { name: 'C++' },
+                { name: 'JavaScript/TypeScript' }
+            ]
+        },
+        {
+            category: 'Pipeline & Orchestration',
+            skills: [
+                { name: 'Airflow' },
+                { name: 'ELT/ETL design' },
+                { name: 'Spark distributed infrastructure (PySpark)' },
+                { name: 'Batch processing' },
+                { name: 'Data quality checks' }
+            ]
+        },
+        {
+            category: 'Analytics & Dashboards',
+            skills: [
+                { name: 'Tableau' },
+                { name: 'Power BI' },
+                { name: 'Star schema modeling' },
+                { name: 'KPI reporting' },
+                { name: 'Ad-hoc analysis' }
+            ]
+        },
+        {
+            category: 'Cloud & DevOps',
+            skills: [
+                { name: 'AWS (EKS, RDS, S3)' },
+                { name: 'Docker' },
+                { name: 'Kubernetes' },
+                { name: 'Jenkins' },
+                { name: 'GitHub Actions' },
+                { name: 'CI/CD' },
+                { name: 'Git' },
+                { name: 'Jira' },
+                { name: 'Terraform' }
+            ]
+        },
+        {
+            category: 'Databases',
+            skills: [
+                { name: 'Oracle' },
+                { name: 'SQL Server' },
+                { name: 'NoSQL (MongoDB, DynamoDB)' },
+                { name: 'SQLite' },
+                { name: 'ChromaDB' }
+            ]
+        },
+        {
+            category: 'AI & ML',
+            skills: [
+                { name: 'LLM API integration' },
+                { name: 'RAG pipelines' },
+                { name: 'MCP (Model Context Protocol)' },
+                { name: 'Prompt engineering' }
+            ]
+        }
+    ];
+
+    function renderSkillsGrid() {
+        const grid = document.getElementById('skills-grid');
+        if (!grid) return;
+
+        grid.innerHTML = SKILLS_BY_CATEGORY.map(({ category, skills }) => `
+            <article class="skill-category-card">
+                <h3 class="skill-category-title">${category}</h3>
+                <ul class="skill-chips">
+                    ${skills.map(({ name, level }) => `
+                        <li class="skill-chip${level ? ` skill-chip--${level}` : ''}">
+                            <span class="skill-chip-name">${name}</span>
+                            ${level ? `<span class="skill-chip-level">${level}</span>` : ''}
+                        </li>
+                    `).join('')}
+                </ul>
+            </article>
+        `).join('');
+    }
+
+    renderSkillsGrid();
+
     // --- Loading Animation ---
     const loadingScreen = document.getElementById('loading-screen');
     const mainContent = document.getElementById('main-content');
